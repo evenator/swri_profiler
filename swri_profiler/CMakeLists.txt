@@ -51,4 +51,6 @@ install(DIRECTORY launch
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
 
-# Need to install html directory at some point.
+install(DIRECTORY html
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
