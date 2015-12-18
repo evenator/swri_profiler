@@ -8,6 +8,6 @@
   <node pkg="swri_profiler" 
         type="profiler_server" 
         name="profiler_server" 
-        args="$(find swri_profiler)/html/ $(arg http_port)">
+        args="$(arg http_port)">
   </node>
 </launch>

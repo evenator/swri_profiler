@@ -9,18 +9,18 @@ try:
     import socketserver  # Python 3
 except ImportError:
     import SocketServer as socketserver
+import rospkg
 
-if len(sys.argv) < 2:
-  exit(2)
-
+rospack = rospkg.RosPack()
+html_root = os.path.join(rospack.get_path('swri_profiler'), 'html')
 try:
-  os.chdir(sys.argv[1])
-  print("Changing directory to:", sys.argv[1])
+  os.chdir(html_root)
+  print("Changing directory to: ", html_root)
 except:
-  print("Error changing directory to:", sys.argv[1])
+  print("Error changing directory to: ", html_root)
 
-if len(sys.argv) > 2:
-    PORT = int(sys.argv[2])
+if len(sys.argv) > 1:
+    PORT = int(sys.argv[1])
 else:
     PORT = 8000
 

@@ -13,6 +13,8 @@
 
   <depend>roscpp</depend>
   <depend>std_msgs</depend>
+  <exec_depend>python-rospkg</exec_depend>
+  <exec_depend>rosbridge_server</exec_depend>
   <depend>swri_profiler_msgs</depend>
 
   <export>
